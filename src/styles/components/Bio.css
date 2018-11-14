@@ -1,0 +1,17 @@
+.Bio__social-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.Bio__social-item {
+    align-items: center;
+    display: flex;
+}
+
+.Bio__social-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.Bio__social-link {
+    margin-left: 0.25rem;
+}

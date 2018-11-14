@@ -14,4 +14,5 @@ body {
 @import './headings.css';
 
 /* Components */
+@import './components/Bio.css';
 @import './components/Layout.css';
