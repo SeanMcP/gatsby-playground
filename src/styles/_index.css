@@ -1,0 +1,17 @@
+/* External */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:500');
+
+/* Global */
+@import './variables.css';
+
+body {
+    font-family: var(--system-fonts);
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Styles */
+@import './headings.css';
+
+/* Components */
+@import './components/Layout.css';

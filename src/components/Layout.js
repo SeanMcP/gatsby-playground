@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import '../styles/_index.css'
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -21,10 +23,10 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div>
+      <section className="Layout">
         {header}
         {children}
-      </div>
+      </section>
     )
   }
 }
