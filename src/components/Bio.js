@@ -1,26 +1,13 @@
 import React from 'react'
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
-import profilePic from './profile-pic.jpg'
-
-class Bio extends React.Component {
-  render() {
-    return (
-      <div>
-        <img src={profilePic} alt={`Kyle Mathews`} />
-        <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San
-          Francisco building useful things.{' '}
-          <a href="https://twitter.com/kylemathews">
-            You should follow him on Twitter
-          </a>
-        </p>
-      </div>
-    )
-  }
+const Bio = () => {
+  return (
+    <section className="Bio">
+      <p>
+        My name is <strong>Sean McPherson</strong>, and I am a software developer in Atlanta, GA. I write about web development, JavaScript, React, and occassionally some other things. (SDG)
+      </p>
+    </section>
+  )
 }
 
 export default Bio
