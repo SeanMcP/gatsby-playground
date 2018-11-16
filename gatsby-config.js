@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Sean McPherson',
     author: 'Sean McPherson',
-    description: 'A starter blog demonstrating what Gatsby can do.',
+    description: 'A personal website for Sean McPherson',
     siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
   },
   pathPrefix: '/gatsby-starter-blog',
@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Sean McPherson`,
+        short_name: `SeanMcP`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

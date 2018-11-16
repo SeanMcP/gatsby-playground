@@ -1,6 +1,7 @@
 .Bio__social-list {
     display: flex;
     list-style-type: none;
+    padding: 0;
 }
 
 .Bio__social-item {

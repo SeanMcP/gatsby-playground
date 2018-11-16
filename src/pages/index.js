@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
+import PostPreview from '../components/PostPreview'
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,20 +24,16 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+        <h2>Recent articles</h2>
+        {posts.map(({ node }) => (
+            <PostPreview
+              key={node.fields.slug}
+              content={node.excerpt}
+              date={node.frontmatter.date}
+              slug={node.fields.slug}
+              title={get(node, 'frontmatter.title') || node.fields.slug}
+            />
+        ))}
       </Layout>
     )
   }
