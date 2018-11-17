@@ -23,10 +23,10 @@ class Layout extends React.Component {
       )
     }
     return (
-      <section className="Layout">
+      <div className="Layout">
         {header}
         {children}
-      </section>
+      </div>
     )
   }
 }

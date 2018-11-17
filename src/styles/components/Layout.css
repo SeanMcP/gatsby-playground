@@ -1,3 +1,10 @@
 .Layout {
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+@media screen and (max-width: calc(800px + 2rem)) {
+    .Layout {
+        margin: 1rem;
+    }
 }
