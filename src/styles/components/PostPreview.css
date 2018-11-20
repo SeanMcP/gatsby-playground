@@ -1,0 +1,37 @@
+.PostPreview:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.PostPreview__footer {
+    display: flex;
+}
+
+.PostPreview__category {
+    margin-right: 1rem;
+}
+
+.PostPreview__category .PostPreview__search-link {
+    background: var(--blue400);
+}
+
+.PostPreview__tags .PostPreview__search-link {
+    background: var(--orange400);
+}
+
+.PostPreview__search-link {
+    background: whitesmoke;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.25rem;
+    color: white;
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
+}
+
+.PostPreview__search-link:hover {
+    border-bottom-width: 0;
+    /* Width of bottom border */
+    transform: translateY(2px);
+}

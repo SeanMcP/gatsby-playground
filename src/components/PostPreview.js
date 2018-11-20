@@ -13,13 +13,24 @@ const PostPreview = (props) => (
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
         <footer className="PostPreview__footer">
             <div className="PostPreview__category">
-                <strong>Category:</strong>{' '}
-                <Link className="PostPreview__search-link" to={`search?category=${props.category}`}>{props.category}</Link>
+                <strong>Category:</strong>
+                <Link
+                    className="PostPreview__search-link"
+                    to={`search?category=${props.category}`}
+                >
+                    {props.category}
+                </Link>
             </div>
             <div className="PostPreview__tags">
-                <strong>Tags:</strong>{' '}
+                <strong>Tags:</strong>
                 {props.tags.map(tag => (
-                    <Link className="PostPreview__search-link" key={tag} to={`search?tags=${tag}`}>{tag}</Link>
+                    <Link
+                        className="PostPreview__search-link"
+                        key={tag}
+                        to={`search?tags=${tag}`}
+                    >
+                        {tag}
+                    </Link>
                 ))}
             </div>
         </footer>
