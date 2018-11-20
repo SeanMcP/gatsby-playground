@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
@@ -27,11 +27,13 @@ class BlogIndex extends React.Component {
         <h2>Recent articles</h2>
         {posts.map(({ node }) => (
             <PostPreview
-              key={node.fields.slug}
-              content={node.excerpt}
-              date={node.frontmatter.date}
-              slug={node.fields.slug}
-              title={get(node, 'frontmatter.title') || node.fields.slug}
+                key={node.fields.slug}
+                category={node.frontmatter.category}
+                content={node.excerpt}
+                date={node.frontmatter.date}
+                slug={node.fields.slug}
+                tags={node.frontmatter.tags}
+                title={get(node, 'frontmatter.title') || node.fields.slug}
             />
         ))}
       </Layout>
@@ -59,6 +61,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            category
+            tags
           }
         }
       }
