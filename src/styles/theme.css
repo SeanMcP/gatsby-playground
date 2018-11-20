@@ -1,0 +1,17 @@
+@import './material-design-color-palette.css';
+
+:root {
+    --primary-bg: var(--gray50);
+    --secondary-bg: var(--gray800);
+    --tertiary-bg: var(--green600);
+
+    --primary-text: var(--secondary-bg);
+    --secondary-text: var(--primary-bg);
+    --tertiary-text: var(--primary-bg);
+
+    --primary-color: var(--blue600);
+    --secondary-color: var(--green600);
+    
+    --primary-hover: var(--blue400);
+    --secondary-hover: var(--green400);
+}

@@ -11,22 +11,28 @@
 }
 
 .PostPreview__category .PostPreview__search-link {
-    background: var(--blue400);
+    background: var(--primary-color);
 }
 
 .PostPreview__tags .PostPreview__search-link {
-    background: var(--orange400);
+    background: var(--secondary-color);
 }
 
 .PostPreview__search-link {
     background: whitesmoke;
     border-bottom: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 0.25rem;
-    color: white;
     display: inline-block;
     margin-left: 0.5rem;
     padding: 0.25rem 0.5rem;
     transition: all 100ms ease-in-out;
+}
+
+.PostPreview__search-link,
+.PostPreview__search-link:hover,
+.PostPreview__search-link:active,
+.PostPreview__search-link:visited {
+    color: var(--secondary-text);
     text-decoration: none;
 }
 
