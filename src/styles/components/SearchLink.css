@@ -1,0 +1,23 @@
+.SearchLink {
+    background: whitesmoke;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: all 100ms ease-in-out;
+}
+
+.SearchLink,
+.SearchLink:hover,
+.SearchLink:active,
+.SearchLink:visited {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
+.SearchLink:hover {
+    border-bottom-width: 0;
+    /* Width of bottom border */
+    transform: translateY(2px);
+}
