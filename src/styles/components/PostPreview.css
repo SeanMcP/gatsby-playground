@@ -9,16 +9,3 @@
 .PostPreview__category {
     margin-right: 1rem;
 }
-
-/*
-    Move below to separate component for
-    category and tag links
-*/
-
-.PostPreview__category .SearchLink {
-    background: var(--primary-color);
-}
-
-.PostPreview__tags .SearchLink {
-    background: var(--secondary-color);
-}

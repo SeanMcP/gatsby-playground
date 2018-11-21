@@ -21,3 +21,13 @@
     /* Width of bottom border */
     transform: translateY(2px);
 }
+
+/* Modified styles */
+
+.SearchLink--category {
+    background: var(--primary-color);
+}
+
+.SearchLink--tags {
+    background: var(--secondary-color);
+}
