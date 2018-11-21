@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
 
-import SearchLink from './common/SearchLink';
+import PostFooter from './PostFooter';
+import SearchLink from '../common/SearchLink';
 
 const PostPreview = (props) => (
     <article className="PostPreview">
@@ -13,25 +14,10 @@ const PostPreview = (props) => (
         </h3>
         <small className="PostPreview__date">{props.date}</small>
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
-        <footer className="PostPreview__footer">
-            <div className="PostPreview__category">
-                <strong>Category:</strong>
-                <SearchLink
-                    queryKey={'category'}
-                    queryValue={props.category}
-                />
-            </div>
-            <div className="PostPreview__tags">
-                <strong>Tags:</strong>
-                {props.tags.map(tag => (
-                    <SearchLink
-                        key={tag}
-                        queryKey={'tags'}
-                        queryValue={tag}
-                    />
-                ))}
-            </div>
-        </footer>
+        <PostFooter
+            category={props.category}
+            tags={props.tags}
+        />
     </article>
 );
 

@@ -20,4 +20,5 @@ body {
 @import './components/Bio.css';
 @import './components/SearchLink.css';
 @import './components/Layout.css';
+@import './components/PostFooter.css';
 @import './components/PostPreview.css';

@@ -5,6 +5,7 @@ import get from 'lodash/get'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
+import PostFooter from '../components/post/PostFooter';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -24,23 +25,30 @@ class BlogPostTemplate extends React.Component {
         <p>{post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
+        <PostFooter
+          category={post.frontmatter.category}
+          tags={post.frontmatter.tags}
+        />
+        <hr />
         <Bio />
-        <ul>
-          <li>
+        {(next || previous) && (
+          <ul>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              <li>
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              </li>
             )}
-          </li>
-          <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              <li>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </li>
             )}
-          </li>
-        </ul>
+          </ul>
+        )}
       </Layout>
     )
   }
@@ -63,6 +71,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
+        tags
       }
     }
   }

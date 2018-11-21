@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import PostPreview from '../components/PostPreview'
+import PostPreview from '../components/post/PostPreview'
 
 class BlogIndex extends React.Component {
   render() {

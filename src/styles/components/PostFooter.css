@@ -1,0 +1,7 @@
+.PostFooter__section {
+    display: inline-block;
+}
+
+.PostFooter__section:not(:last-child) {
+    margin-right: 1rem;
+}

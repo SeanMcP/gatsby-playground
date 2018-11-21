@@ -7,7 +7,7 @@ import isArray from 'lodash/isArray';
 import capitalize from 'lodash/capitalize';
 
 import Layout from '../components/Layout';
-import PostPreview from '../components/PostPreview'
+import PostPreview from '../components/post/PostPreview'
 
 
 const Search = (props) => {
