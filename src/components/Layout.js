@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import '../styles/_index.css'
 import Header from './Header';
-import MainNav from './MainNav';
+import Footer from './Footer';
 
 class Layout extends React.Component {
   render() {
@@ -12,6 +12,7 @@ class Layout extends React.Component {
       <div className="Layout">
         <Header location={location} title={title} />
         {children}
+        <Footer />
       </div>
     )
   }

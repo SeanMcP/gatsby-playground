@@ -18,6 +18,7 @@ body {
 
 /* Components */
 @import './components/Bio.css';
+@import './components/Footer.css';
 @import './components/Header.css';
 @import './components/Layout.css';
 @import './components/MainNav.css';
