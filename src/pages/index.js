@@ -30,6 +30,7 @@ class BlogIndex extends React.Component {
                 author={node.frontmatter.author}
                 key={node.fields.slug}
                 category={node.frontmatter.category}
+                condensed
                 content={node.excerpt}
                 date={node.frontmatter.date}
                 slug={node.fields.slug}

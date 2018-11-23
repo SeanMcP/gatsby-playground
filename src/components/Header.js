@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
+import Responsive from './common/Responsive';
 
 const Header = (props) => {
     return (
         <header className="Header">
-            <Link className="Header__logo-link" to={'/'}>{props.title}</Link>
-            <MainNav location={props.location} />
+            <Responsive modifier="header">
+                <Link className="Header__logo-link" to={'/'}>{props.title}</Link>
+                <MainNav location={props.location} />
+            </Responsive>
         </header>
     );
 }

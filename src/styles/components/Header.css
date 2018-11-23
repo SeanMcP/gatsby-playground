@@ -1,4 +1,9 @@
 .Header {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
+}
+
+.Responsive--header {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
 }

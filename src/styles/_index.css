@@ -8,6 +8,7 @@ body {
     background: var(--primary-bg);
     color: var(--primary-text);
     font-family: var(--system-fonts);
+    margin: 0;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -24,4 +25,5 @@ body {
 @import './components/MainNav.css';
 @import './components/PostFooter.css';
 @import './components/PostPreview.css';
+@import './components/Responsive.css';
 @import './components/SearchLink.css';

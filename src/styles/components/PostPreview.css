@@ -1,3 +1,8 @@
 .PostPreview:not(:last-of-type) {
     margin-bottom: 2rem;
 }
+
+/* .PostPreview--condensed {
+    display: flex;
+    flex-wrap: wrap;
+} */

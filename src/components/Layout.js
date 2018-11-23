@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import '../styles/_index.css'
 import Header from './Header';
+import Responsive from './common/Responsive';
 import Footer from './Footer';
 
 class Layout extends React.Component {
@@ -11,7 +12,9 @@ class Layout extends React.Component {
     return (
       <div className="Layout">
         <Header location={location} title={title} />
-        {children}
+        <Responsive modifier={'layout'}>
+          {children}
+        </Responsive>
         <Footer />
       </div>
     )

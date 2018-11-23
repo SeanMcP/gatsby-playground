@@ -1,11 +1,7 @@
 .Layout {
-    margin: 1rem auto;
-    max-width: 800px;
+    margin: 0;
 }
 
-/* The 46px is a mystery to me, but it works */
-@media screen and (max-width: calc(800px + 46px)) {
-    .Layout {
-        margin: 1rem;
-    }
+.Responsive--layout {
+    margin: 2rem 0;
 }

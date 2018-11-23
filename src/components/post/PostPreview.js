@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import PostFooter from './PostFooter';
 
 const PostPreview = (props) => (
-    <article className="PostPreview">
+    <article className={`PostPreview ${props.condensed ? 'PostPreview--condensed' : ''}`}>
         <h3 className="PostPreview__title">
             <Link to={`articles/${props.slug}`}>
                 {props.title}
@@ -22,6 +22,7 @@ const PostPreview = (props) => (
 
 PostPreview.propTypes = {
     author: PropTypes.string.isRequired,
+    condensed: PropTypes.bool,
     content: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
