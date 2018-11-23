@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../styles/_index.css'
+import MainNav from './MainNav';
 
 class Layout extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Layout extends React.Component {
     }
     return (
       <div className="Layout">
+        <MainNav location={location} />
         {header}
         {children}
       </div>

@@ -7,7 +7,7 @@ import PostFooter from './PostFooter';
 const PostPreview = (props) => (
     <article className="PostPreview">
         <h3 className="PostPreview__title">
-            <Link to={props.slug}>
+            <Link to={`articles/${props.slug}`}>
                 {props.title}
             </Link>
         </h3>
