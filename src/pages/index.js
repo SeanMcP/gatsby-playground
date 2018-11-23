@@ -27,6 +27,7 @@ class BlogIndex extends React.Component {
         <h2>Recent articles</h2>
         {posts.map(({ node }) => (
             <PostPreview
+                author={node.frontmatter.author}
                 key={node.fields.slug}
                 category={node.frontmatter.category}
                 content={node.excerpt}
@@ -62,6 +63,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             category
+            author
             tags
           }
         }

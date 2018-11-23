@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+        <p>{post.frontmatter.date} by {post.frontmatter.author}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <PostFooter
@@ -72,6 +72,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         category
+        author
         tags
       }
     }

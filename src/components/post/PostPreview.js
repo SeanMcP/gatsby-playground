@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
 
 import PostFooter from './PostFooter';
-import SearchLink from '../common/SearchLink';
 
 const PostPreview = (props) => (
     <article className="PostPreview">
@@ -12,7 +11,7 @@ const PostPreview = (props) => (
                 {props.title}
             </Link>
         </h3>
-        <small className="PostPreview__date">{props.date}</small>
+        <small className="PostPreview__date">{props.date} by {props.author}</small>
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
         <PostFooter
             category={props.category}
