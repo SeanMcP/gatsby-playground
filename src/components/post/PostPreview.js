@@ -11,7 +11,7 @@ const PostPreview = (props) => (
                 {props.title}
             </Link>
         </h3>
-        <small className="PostPreview__date">{props.date} by {props.author}</small>
+        <small className="PostPreview__date">{props.date}</small>
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
         <PostFooter
             category={props.category}
@@ -21,6 +21,7 @@ const PostPreview = (props) => (
 );
 
 PostPreview.propTypes = {
+    author: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,

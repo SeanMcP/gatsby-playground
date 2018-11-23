@@ -3,11 +3,10 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import PostPreview from '../components/post/PostPreview'
 
-class BlogIndex extends React.Component {
+class Articles extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -21,10 +20,9 @@ class BlogIndex extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
+          title={`Blog - ${siteTitle}`}
         />
-        <Bio />
-        <h2>Recent articles</h2>
+        <h2>Articles</h2>
         {posts.map(({ node }) => (
             <PostPreview
                 author={node.frontmatter.author}
@@ -42,7 +40,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Articles
 
 export const pageQuery = graphql`
   query {
@@ -53,8 +51,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
