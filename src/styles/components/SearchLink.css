@@ -24,10 +24,10 @@
 
 /* Modified styles */
 
-.SearchLink--category {
+.SearchLink--categories {
     background: var(--primary-color);
 }
 
-.SearchLink--tag {
+.SearchLink--tags {
     background: var(--secondary-color);
 }

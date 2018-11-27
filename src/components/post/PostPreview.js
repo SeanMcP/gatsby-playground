@@ -9,7 +9,7 @@ const PostPreview = (props) => (
     <article className={`PostPreview ${props.condensed ? 'PostPreview--condensed' : ''}`}>
         <header className="PostPreview__header">
             <h3 className="PostPreview__title">
-                <Link to={`article/${props.slug}`}>
+                <Link to={`articles/${props.slug}`}>
                     {props.title}
                 </Link>
             </h3>

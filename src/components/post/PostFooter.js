@@ -8,7 +8,7 @@ const PostFooter = (props) => (
         <section className="PostFooter__section">
             <span className="PostFooter__label">Category:</span>
             <SearchLink
-                queryKey={'category'}
+                queryKey={'categories'}
                 queryValue={props.category}
             />
         </section>
@@ -17,7 +17,7 @@ const PostFooter = (props) => (
             {props.tags.map(tag => (
                 <SearchLink
                     key={tag}
-                    queryKey={'tag'}
+                    queryKey={'tags'}
                     queryValue={tag}
                 />
             ))}

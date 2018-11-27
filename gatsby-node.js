@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Make tag pages
         tags.forEach(tag => {
           createPage({
-            path: `/tag/${_.kebabCase(tag)}/`,
+            path: `/tags/${_.kebabCase(tag)}/`,
             component: tagTemplate,
             context: {
               tag,
@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Make category pages
         categories.forEach(category => {
           createPage({
-            path: `/category/${_.kebabCase(category)}/`,
+            path: `/categories/${_.kebabCase(category)}/`,
             component: categoryTemplate,
             context: {
               category,
@@ -88,7 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
           const next = index === 0 ? null : posts[index - 1].node;
 
           createPage({
-            path: `/article/${post.node.fields.slug.slice(1)}`,
+            path: `/articles/${post.node.fields.slug.slice(1)}`,
             component: blogPost,
             context: {
               slug: post.node.fields.slug,

@@ -20,7 +20,7 @@ class Articles extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`Blog - ${siteTitle}`}
+          title={`Articles - ${siteTitle}`}
         />
         <h2>Articles</h2>
         {posts.map(({ node }) => (
