@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Calendar } from 'react-feather';
+
+import Icon from '../common/Icon';
 
 const PostDate = ({ date, hideIcon, modifier }) => {
     return (
         <div className={`PostDate ${modifier ? `PostDate--${modifier}` : ''}`}>
-            {!hideIcon && <Calendar className={'PostDate__icon'} size={20}/>}
-            <date className="PostDate__date">{date}</date>
+            {!hideIcon && <Icon className={'PostDate__icon'} icon={'Calendar'} />}
+            <time className="PostDate__date">{date}</time>
         </div>
     );
 };

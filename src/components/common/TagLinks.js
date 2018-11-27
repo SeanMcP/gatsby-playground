@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag } from 'react-feather';
 
 import SearchLink from './SearchLink';
+import Icon from '../common/Icon';
 
 const TagLinks = ({ hideIcon, modifier, tags }) => {
     return (
         <div className={`TagLinks ${modifier ? `TagLinks--${modifier}` : ''}`}>
-            {!hideIcon && <Tag className={'TagLinks__icon'} size={20} />}
+            {!hideIcon && <Icon className={'TagLinks__icon'} icon={'Tag'} />}
             {tags.map(tag => (
                 <SearchLink
                     key={tag}
