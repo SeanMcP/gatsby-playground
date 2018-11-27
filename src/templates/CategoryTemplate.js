@@ -1,21 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
-import PostPreview from '../components/post/PostPreview'
+import PostPreview from '../components/post/PostPreview';
 
-const CategoryTemplate = (props) => {
+const CategoryTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
     const posts = get(props, 'data.allMarkdownRemark.edges');
-    const { location: { pathname } } = window;
+    const {
+        location: { pathname },
+    } = window;
     const category = pathname.slice(pathname.lastIndexOf('/') + 1);
     return (
         <Layout location={props.location} title={siteTitle}>
-            <Helmet
-                title={`Categories | ${siteTitle}`}
-            />
+            <Helmet title={`Categories | ${siteTitle}`} />
             <h1>Category: {category}</h1>
             {posts.map(({ node }) => (
                 <PostPreview
@@ -44,8 +44,14 @@ export const pageQuery = graphql`
             }
         }
         allMarkdownRemark(
-            filter: { frontmatter: { category: { eq: $category }, published: { eq: true } } },
-            sort: {fields: [frontmatter___date], order: DESC}, limit: 10
+            filter: {
+                frontmatter: {
+                    category: { eq: $category }
+                    published: { eq: true }
+                }
+            }
+            sort: { fields: [frontmatter___date], order: DESC }
+            limit: 10
         ) {
             edges {
                 node {

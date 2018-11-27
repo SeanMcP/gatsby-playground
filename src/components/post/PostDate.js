@@ -6,7 +6,9 @@ import Icon from '../common/Icon';
 const PostDate = ({ date, hideIcon, modifier }) => {
     return (
         <div className={`PostDate ${modifier ? `PostDate--${modifier}` : ''}`}>
-            {!hideIcon && <Icon className={'PostDate__icon'} icon={'Calendar'} />}
+            {!hideIcon && (
+                <Icon className={'PostDate__icon'} icon={'Calendar'} />
+            )}
             <time className="PostDate__date">{date}</time>
         </div>
     );
@@ -15,7 +17,7 @@ const PostDate = ({ date, hideIcon, modifier }) => {
 PostDate.propTypes = {
     date: PropTypes.string.isRequired,
     hideIcon: PropTypes.bool,
-    modifier: PropTypes.string
+    modifier: PropTypes.string,
 };
 
 export default PostDate;

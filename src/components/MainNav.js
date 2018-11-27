@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-
 const links = [
     {
         destination: '/',
-        text: 'Home'
+        text: 'Home',
     },
     {
         destination: '/articles',
-        text: 'Articles'
+        text: 'Articles',
     },
     // {
     //     destination: '/contact',
@@ -23,7 +22,11 @@ const MainNav = ({ location }) => {
         <nav className="MainNav">
             {links.map(link => (
                 <Link
-                    className={`MainNav__link ${location.pathname === link.destination ? 'MainNav__link--current' : ''}`}
+                    className={`MainNav__link ${
+                        location.pathname === link.destination
+                            ? 'MainNav__link--current'
+                            : ''
+                    }`}
                     key={link.destination}
                     tabIndex={0}
                     to={link.destination}
@@ -32,7 +35,7 @@ const MainNav = ({ location }) => {
                 </Link>
             ))}
         </nav>
-    )
+    );
 };
 
 // MainNav.propTypes = {

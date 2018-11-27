@@ -9,11 +9,7 @@ const TagLinks = ({ hideIcon, modifier, tags }) => {
         <div className={`TagLinks ${modifier ? `TagLinks--${modifier}` : ''}`}>
             {!hideIcon && <Icon className={'TagLinks__icon'} icon={'Tag'} />}
             {tags.map(tag => (
-                <SearchLink
-                    key={tag}
-                    queryKey={'tags'}
-                    queryValue={tag}
-                />
+                <SearchLink key={tag} queryKey={'tags'} queryValue={tag} />
             ))}
         </div>
     );
@@ -22,7 +18,7 @@ const TagLinks = ({ hideIcon, modifier, tags }) => {
 TagLinks.propTypes = {
     hideIcon: PropTypes.bool,
     modifier: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default TagLinks;

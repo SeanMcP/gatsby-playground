@@ -11,6 +11,6 @@ const Footer = () => {
             </Responsive>
         </footer>
     );
-}
+};
 
 export default Footer;

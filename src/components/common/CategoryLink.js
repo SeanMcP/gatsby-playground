@@ -7,15 +7,16 @@ import SearchLink from './SearchLink';
 
 const CategoryLink = ({ category, hideIcon, lede, modifier }) => {
     return (
-        <div className={`CategoryLink ${modifier ? `CategoryLink--${modifier}` : ''}`}>
+        <div
+            className={`CategoryLink ${
+                modifier ? `CategoryLink--${modifier}` : ''
+            }`}
+        >
             {!hideIcon && (
                 <Icon className={'CategoryLink__icon'} icon={'Folder'} />
                 // <Folder className={'CategoryLink__icon'} size={20} />
             )}
-            <SearchLink
-                queryKey={'categories'}
-                queryValue={category}
-            />
+            <SearchLink queryKey={'categories'} queryValue={category} />
         </div>
     );
 };
