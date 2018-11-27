@@ -22,20 +22,21 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <article className="BlogPost">
+        <article className="PostTemplate">
           <header className="PostTemplate__header">
             <h1>{post.frontmatter.title}</h1>
             <section className={'PostTemplate__details'}>
               <PostDate date={post.frontmatter.date} hideIcon />
-              <span className={'PostTemplate__details-spacer'}>in</span>
-              <CategoryLink queryValue={post.frontmatter.category} hideIcon />
             </section>
           </header>
           <main dangerouslySetInnerHTML={{ __html: post.html }} />
           <PostFooter
+            category={post.frontmatter.category}
+            date={post.frontmatter.date}
+            modifier={'post-template'}
             tags={post.frontmatter.tags}
           />
-          {(next || previous) && (
+          {/* {(next || previous) && (
             <ul>
               {previous && (
                 <li>
@@ -52,7 +53,7 @@ class PostTemplate extends React.Component {
                 </li>
               )}
             </ul>
-          )}
+          )} */}
         </article>
       </Layout>
     )
@@ -75,7 +76,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
         category
         tags
       }

@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag } from 'react-feather';
 
 import PostDate from './PostDate';
-import SearchLink from '../common/SearchLink';
+import CategoryLink from '../common/CategoryLink';
 import TagLinks from '../common/TagLinks';
 
-const PostFooter = ({ date, tags }) => (
-    <footer className="PostFooter">
+const PostFooter = ({ category, date, modifier, tags }) => (
+    <footer className={`PostFooter ${modifier ? `PostFooter--${modifier}` : ''}`}>
         {date && <PostDate date={date} modifier="post-footer" />}
+        {category && <CategoryLink category={category} />}
         <TagLinks modifier={'post-footer'} tags={tags} />
     </footer>
 );
 
 PostFooter.propTypes = {
     date: PropTypes.string,
+    modifier: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 

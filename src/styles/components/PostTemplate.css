@@ -1,4 +1,7 @@
 .PostTemplate__header {
+    border-bottom: 1px solid var(--gray200);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -10,4 +13,11 @@
 
 .PostTemplate__details-spacer {
     margin: 0 0.25rem;
+}
+
+.PostTemplate
+.PostFooter--post-template {
+    border-top: 1px solid var(--gray200);
+    margin-top: 2rem;
+    padding-top: 2rem;
 }

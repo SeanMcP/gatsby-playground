@@ -13,7 +13,7 @@ const PostPreview = (props) => (
                     {props.title}
                 </Link>
             </h3>
-            <CategoryLink queryValue={props.category} />
+            <CategoryLink category={props.category} />
         </header>
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
         <PostFooter

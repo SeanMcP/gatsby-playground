@@ -5,7 +5,7 @@ import { Folder } from 'react-feather';
 import Icon from './Icon';
 import SearchLink from './SearchLink';
 
-const CategoryLink = ({ hideIcon, lede, modifier, queryValue }) => {
+const CategoryLink = ({ category, hideIcon, lede, modifier }) => {
     return (
         <div className={`CategoryLink ${modifier ? `CategoryLink--${modifier}` : ''}`}>
             {!hideIcon && (
@@ -14,17 +14,17 @@ const CategoryLink = ({ hideIcon, lede, modifier, queryValue }) => {
             )}
             <SearchLink
                 queryKey={'categories'}
-                queryValue={queryValue}
+                queryValue={category}
             />
         </div>
     );
 };
 
 CategoryLink.propTypes = {
+    category: PropTypes.string.isRequired,
     hideIcon: PropTypes.bool,
     lede: PropTypes.string,
     modifier: PropTypes.string,
-    queryValue: PropTypes.string.isRequired,
 };
 
 export default CategoryLink;
