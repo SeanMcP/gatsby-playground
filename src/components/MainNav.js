@@ -11,10 +11,10 @@ const links = [
         destination: '/articles',
         text: 'Articles',
     },
-    // {
-    //     destination: '/contact',
-    //     text: 'Contact'
-    // }
+    {
+        destination: '/contact',
+        text: 'Contact',
+    },
 ];
 
 const MainNav = ({ location }) => {
@@ -38,8 +38,8 @@ const MainNav = ({ location }) => {
     );
 };
 
-// MainNav.propTypes = {
-//     location: PropTypes.string.isRequired
-// };
+MainNav.propTypes = {
+    location: PropTypes.object.isRequired,
+};
 
 export default MainNav;
