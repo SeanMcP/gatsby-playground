@@ -3,11 +3,13 @@
 
 /* Global */
 @import './variables.css';
+@import './typography.css';
 
 body {
     background: var(--primary-bg);
     color: var(--primary-text);
     font-family: var(--system-fonts);
+    font-size: 16px;
     margin: 0;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
