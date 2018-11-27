@@ -57,7 +57,6 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM D, YYYY")
                         title
                         category
-                        author
                         tags
                     }
                 }
