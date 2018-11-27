@@ -27,8 +27,8 @@ class BlogIndex extends React.Component {
         <h2>Recent articles</h2>
         {posts.map(({ node }) => (
             <PostPreview
-                author={node.frontmatter.author}
                 key={node.fields.slug}
+                author={node.frontmatter.author}
                 category={node.frontmatter.category}
                 condensed
                 content={node.excerpt}

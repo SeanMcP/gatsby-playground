@@ -1,16 +1,34 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet'
+import get from 'lodash/get';
 
 import Layout from '../components/Layout';
+import PostPreview from '../components/post/PostPreview'
 
 const TagTemplate = (props) => {
+    const siteTitle = get(props, 'data.site.siteMetadata.title');
+    const posts = get(props, 'data.allMarkdownRemark.edges');
+    const { location: { pathname } } = window;
+    const tag = pathname.slice(pathname.lastIndexOf('/') + 1);
     return (
-        <Layout title={props.data.siteTitle}>
+        <Layout location={props.location} title={siteTitle}>
             <Helmet
                 title={`Tags | ${siteTitle}`}
             />
-            <h1>Tags</h1>
+            <h1>Tag: {tag}</h1>
+            {posts.map(({ node }) => (
+                <PostPreview
+                    key={node.fields.slug}
+                    author={node.frontmatter.author}
+                    category={node.frontmatter.category}
+                    content={node.excerpt}
+                    date={node.frontmatter.date}
+                    slug={node.fields.slug}
+                    tags={node.frontmatter.tags}
+                    title={get(node, 'frontmatter.title') || node.fields.slug}
+                />
+            ))}
         </Layout>
     );
 };
@@ -18,7 +36,7 @@ const TagTemplate = (props) => {
 export default TagTemplate;
 
 export const pageQuery = graphql`
-    query ($tag: String!) {
+    query BlogPostsByTag($tag: String!) {
         site {
             siteMetadata {
                 title

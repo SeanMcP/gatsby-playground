@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const SearchLink = ({ className, queryKey, queryValue }) => (
     <Link
         className={`SearchLink SearchLink--${queryKey} ${className ? className : ''}`}
-        to={`search?${queryKey}=${queryValue}`}
+        to={`/${queryKey}/${queryValue}`}
     >
         {queryValue}
     </Link>
