@@ -17,7 +17,7 @@ const PostFooter = (props) => (
             {props.tags.map(tag => (
                 <SearchLink
                     key={tag}
-                    queryKey={'tags'}
+                    queryKey={'tag'}
                     queryValue={tag}
                 />
             ))}

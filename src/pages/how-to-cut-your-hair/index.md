@@ -2,9 +2,9 @@
 title: How to Cut Your Hair
 date: '2018-11-26T14:29:00.000Z'
 author: Sean McPherson
-category: Skills
+category: skills
 tags: [personal, frugal]
-published: true
+published: false
 ---
 
 On morning in the fall of 2010, I left the dorm and biked my shaggy-headed self to the local barber. He charged me $10.00 for a simple haircut with the clippers, and I left a two-dollars tip.

@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js');
+    const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
     const tagTemplate = path.resolve('./src/templates/TagTemplate.js');
     resolve(
       graphql(
@@ -20,8 +21,9 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
-                    title
+                    category
                     tags
+                    title
                   }
                 }
               }
@@ -51,10 +53,32 @@ exports.createPages = ({ graphql, actions }) => {
         // Make tag pages
         tags.forEach(tag => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
+            path: `/tag/${_.kebabCase(tag)}/`,
             component: tagTemplate,
             context: {
               tag,
+            },
+          })
+        })
+
+        // Category pages:
+        let categories = []
+        // Iterate through each post, putting all found categories into `categories`
+        _.each(posts, edge => {
+          if (_.get(edge, "node.frontmatter.category")) {
+            categories.push(edge.node.frontmatter.category);
+          }
+        })
+        // Eliminate duplicate categories
+        categories = _.uniq(categories)
+
+        // Make category pages
+        categories.forEach(category => {
+          createPage({
+            path: `/category/${_.kebabCase(category)}/`,
+            component: categoryTemplate,
+            context: {
+              category,
             },
           })
         })
@@ -64,7 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
           const next = index === 0 ? null : posts[index - 1].node;
 
           createPage({
-            path: 'articles' + post.node.fields.slug,
+            path: `/article/${post.node.fields.slug.slice(1)}`,
             component: blogPost,
             context: {
               slug: post.node.fields.slug,

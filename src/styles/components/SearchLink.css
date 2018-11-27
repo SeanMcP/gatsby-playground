@@ -28,6 +28,6 @@
     background: var(--primary-color);
 }
 
-.SearchLink--tags {
+.SearchLink--tag {
     background: var(--secondary-color);
 }
