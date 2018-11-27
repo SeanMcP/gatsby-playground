@@ -1,7 +1,8 @@
-.PostFooter__section {
-    display: inline-block;
+.PostFooter {
+    align-items: center;
+    display: flex;
 }
 
-.PostFooter__section:not(:last-child) {
-    margin-right: 1rem;
+.PostFooter > *:not(:last-child) {
+    margin-right: 2rem;
 }

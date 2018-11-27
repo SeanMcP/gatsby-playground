@@ -1,8 +1,8 @@
-.PostDate {
+.TagLinks {
     align-items: center;
     display: flex;
 }
 
-.PostDate__icon {
+.TagLinks__icon {
     margin-right: 0.5rem;
 }

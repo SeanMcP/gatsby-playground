@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
 
-import PostDate from './PostDate';
+import CategoryLink from '../common/CategoryLink';
 import PostFooter from './PostFooter';
 
 const PostPreview = (props) => (
@@ -13,15 +13,13 @@ const PostPreview = (props) => (
                     {props.title}
                 </Link>
             </h3>
-            <PostDate date={props.date} modifier={'post-preview'} />
+            <CategoryLink queryValue={props.category} />
         </header>
         <p className="PostPreview__content" dangerouslySetInnerHTML={{ __html: props.content }} />
-        {!props.condensed && (
-            <PostFooter
-                category={props.category}
-                tags={props.tags}
-            />
-        )}
+        <PostFooter
+            date={props.date}
+            tags={props.tags}
+        />
     </article>
 );
 

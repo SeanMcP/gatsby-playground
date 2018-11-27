@@ -21,10 +21,9 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <h1>{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <PostFooter
-          category={post.frontmatter.category}
+          date={post.frontmatter.date}
           tags={post.frontmatter.tags}
         />
         {(next || previous) && (

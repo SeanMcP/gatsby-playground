@@ -1,10 +1,4 @@
 .SearchLink {
-    background: whitesmoke;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin-left: 0.5rem;
-    padding: 0.25rem 0.5rem;
     transition: all 100ms ease-in-out;
 }
 
@@ -12,22 +6,31 @@
 .SearchLink:hover,
 .SearchLink:active,
 .SearchLink:visited {
-    color: var(--secondary-text);
+    /* color: var(--secondary-text); */
     text-decoration: none;
-}
-
-.SearchLink:hover {
-    border-bottom-width: 0;
-    /* Width of bottom border */
-    transform: translateY(2px);
 }
 
 /* Modified styles */
 
 .SearchLink--categories {
-    background: var(--primary-color);
+    text-transform: capitalize;
 }
 
 .SearchLink--tags {
-    background: var(--secondary-color);
+    background: var(--gray200);
+    border-radius: 0.125rem;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.SearchLink--tags,
+.SearchLink--tags:hover,
+.SearchLink--tags:active,
+.SearchLink--tags:visited {
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+.SearchLink--tags:hover {
+    background: var(--gray300);
 }

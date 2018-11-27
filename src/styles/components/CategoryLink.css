@@ -1,8 +1,8 @@
-.PostDate {
+.CategoryLink {
     align-items: center;
     display: flex;
 }
 
-.PostDate__icon {
+.CategoryLink__icon {
     margin-right: 0.5rem;
 }

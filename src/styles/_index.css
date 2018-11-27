@@ -19,6 +19,7 @@ body {
 
 /* Components */
 @import './components/Bio.css';
+@import './components/CategoryLink.css';
 @import './components/Footer.css';
 @import './components/Header.css';
 @import './components/Layout.css';
@@ -28,3 +29,4 @@ body {
 @import './components/PostPreview.css';
 @import './components/Responsive.css';
 @import './components/SearchLink.css';
+@import './components/TagLinks.css';

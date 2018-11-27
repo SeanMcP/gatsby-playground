@@ -1,32 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Tag } from 'react-feather';
 
+import PostDate from './PostDate';
 import SearchLink from '../common/SearchLink';
+import TagLinks from '../common/TagLinks';
 
 const PostFooter = (props) => (
     <footer className="PostFooter">
-        <section className="PostFooter__section">
-            <span className="PostFooter__label">Category:</span>
-            <SearchLink
-                queryKey={'categories'}
-                queryValue={props.category}
-            />
-        </section>
-        <section className="PostFooter__section">
-            <span className="PostFooter__label">Tags:</span>
-            {props.tags.map(tag => (
-                <SearchLink
-                    key={tag}
-                    queryKey={'tags'}
-                    queryValue={tag}
-                />
-            ))}
-        </section>
+        <PostDate date={props.date} modifier="post-footer" />
+        <TagLinks modifier={'post-footer'} tags={props.tags} />
     </footer>
 );
 
 PostFooter.propTypes = {
-    category: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    // category: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
