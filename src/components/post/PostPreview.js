@@ -24,7 +24,7 @@ const PostPreview = (props) => (
 );
 
 PostPreview.propTypes = {
-    author: PropTypes.string.isRequired,
+    author: PropTypes.string,
     condensed: PropTypes.bool,
     content: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,

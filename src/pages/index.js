@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
+import PostBio from '../components/post/PostBio'
 import Layout from '../components/Layout'
 import PostPreview from '../components/post/PostPreview'
 
@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Bio />
+        <h1>Hey there!</h1>
         <h2>Recent articles</h2>
         {posts.map(({ node }) => (
             <PostPreview

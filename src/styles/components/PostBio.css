@@ -1,0 +1,41 @@
+.PostBio {
+    border-top: 1px solid var(--gray200);
+    display: flex;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.PostBio__image {
+    border-radius: 5rem;
+    margin-right: 1rem;
+    height: 5rem;
+    /* width: 5rem; */
+}
+
+.PostBio__content > *:first-child {
+    margin-top: 0;
+}
+
+.PostBio__content > *:last-child {
+    margin-bottom: 0;
+}
+
+.PostBio__social-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+}
+
+.PostBio__social-item {
+    align-items: center;
+    display: flex;
+}
+
+.PostBio__social-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.PostBio__social-link {
+    margin-left: 0.25rem;
+}

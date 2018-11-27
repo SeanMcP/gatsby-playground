@@ -18,13 +18,13 @@ body {
 @import './links.css';
 
 /* Components */
-@import './components/Bio.css';
 @import './components/CategoryLink.css';
 @import './components/Footer.css';
 @import './components/Header.css';
 @import './components/Layout.css';
 @import './components/MainNav.css';
 @import './components/PostDate.css';
+@import './components/PostBio.css';
 @import './components/PostFooter.css';
 @import './components/PostPreview.css';
 @import './components/PostTemplate.css';

@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import CategoryLink from '../components/common/CategoryLink';
+import PostBio from '../components/post/PostBio';
 import Layout from '../components/Layout'
 import PostDate from '../components/post/PostDate';
 import PostFooter from '../components/post/PostFooter';
@@ -36,6 +36,7 @@ class PostTemplate extends React.Component {
             modifier={'post-template'}
             tags={post.frontmatter.tags}
           />
+          <PostBio />
           {/* {(next || previous) && (
             <ul>
               {previous && (

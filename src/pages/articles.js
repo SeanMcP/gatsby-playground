@@ -22,7 +22,7 @@ class Articles extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Articles - ${siteTitle}`}
         />
-        <h2>Articles</h2>
+        <h1>Articles</h1>
         {posts.map(({ node }) => (
             <PostPreview
                 author={node.frontmatter.author}
