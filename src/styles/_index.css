@@ -31,5 +31,6 @@ body {
 @import './components/PostPreview.css';
 @import './components/PostTemplate.css';
 @import './components/Responsive.css';
+@import './components/SearchHeader.css';
 @import './components/SearchLink.css';
 @import './components/TagLinks.css';

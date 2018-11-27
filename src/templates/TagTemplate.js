@@ -5,6 +5,7 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import PostPreview from '../components/post/PostPreview';
+import SearchHeader from '../components/common/SearchHeader';
 
 const TagTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
@@ -16,7 +17,7 @@ const TagTemplate = props => {
     return (
         <Layout location={props.location} title={siteTitle}>
             <Helmet title={`Tags | ${siteTitle}`} />
-            <h1>Tag: {tag}</h1>
+            <SearchHeader queryKey={'Tag'} queryValue={tag} />
             {posts.map(({ node }) => (
                 <PostPreview
                     key={node.fields.slug}

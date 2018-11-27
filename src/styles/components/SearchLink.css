@@ -1,15 +1,3 @@
-.SearchLink {
-    transition: all 100ms ease-in-out;
-}
-
-.SearchLink,
-.SearchLink:hover,
-.SearchLink:active,
-.SearchLink:visited {
-    /* color: var(--secondary-text); */
-    text-decoration: none;
-}
-
 /* Modified styles */
 
 .SearchLink--categories {
@@ -17,20 +5,9 @@
 }
 
 .SearchLink--tags {
-    background: var(--gray200);
-    border-radius: 0.125rem;
-    margin-left: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    margin-left: 0.25rem;
 }
 
-.SearchLink--tags,
-.SearchLink--tags:hover,
-.SearchLink--tags:active,
-.SearchLink--tags:visited {
-    color: var(--primary-text);
-    text-decoration: none;
-}
-
-.SearchLink--tags:hover {
-    background: var(--gray300);
+.SearchLink--tags:not(:last-child)::after {
+    content: ','
 }

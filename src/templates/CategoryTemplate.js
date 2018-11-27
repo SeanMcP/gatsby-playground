@@ -5,6 +5,7 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import PostPreview from '../components/post/PostPreview';
+import SearchHeader from '../components/common/SearchHeader';
 
 const CategoryTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
@@ -16,7 +17,7 @@ const CategoryTemplate = props => {
     return (
         <Layout location={props.location} title={siteTitle}>
             <Helmet title={`Categories | ${siteTitle}`} />
-            <h1>Category: {category}</h1>
+            <SearchHeader queryKey={'Category'} queryValue={category} />
             {posts.map(({ node }) => (
                 <PostPreview
                     key={node.fields.slug}
