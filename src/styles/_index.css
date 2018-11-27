@@ -23,6 +23,7 @@ body {
 @import './components/Header.css';
 @import './components/Layout.css';
 @import './components/MainNav.css';
+@import './components/PostDate.css';
 @import './components/PostFooter.css';
 @import './components/PostPreview.css';
 @import './components/Responsive.css';

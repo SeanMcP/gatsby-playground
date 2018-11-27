@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import PostFooter from '../components/post/PostFooter';
 
@@ -22,15 +21,12 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <h1>{post.frontmatter.title}</h1>
-        <date>{post.frontmatter.date}</date>
+        <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
         <PostFooter
           category={post.frontmatter.category}
           tags={post.frontmatter.tags}
         />
-        <hr />
-        <Bio />
         {(next || previous) && (
           <ul>
             {previous && (
