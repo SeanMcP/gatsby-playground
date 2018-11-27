@@ -6,16 +6,15 @@ import PostDate from './PostDate';
 import SearchLink from '../common/SearchLink';
 import TagLinks from '../common/TagLinks';
 
-const PostFooter = (props) => (
+const PostFooter = ({ date, tags }) => (
     <footer className="PostFooter">
-        <PostDate date={props.date} modifier="post-footer" />
-        <TagLinks modifier={'post-footer'} tags={props.tags} />
+        {date && <PostDate date={date} modifier="post-footer" />}
+        <TagLinks modifier={'post-footer'} tags={tags} />
     </footer>
 );
 
 PostFooter.propTypes = {
-    date: PropTypes.string.isRequired,
-    // category: PropTypes.string.isRequired,
+    date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 

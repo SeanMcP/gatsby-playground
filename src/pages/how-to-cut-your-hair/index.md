@@ -1,9 +1,8 @@
 ---
 title: How to Cut Your Hair
 date: '2018-11-26T14:29:00.000Z'
-author: Sean McPherson
-category: skills
-tags: [personal, frugal]
+category: finances
+tags: [frugal, personal, skill]
 published: false
 ---
 

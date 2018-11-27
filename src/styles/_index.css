@@ -27,6 +27,7 @@ body {
 @import './components/PostDate.css';
 @import './components/PostFooter.css';
 @import './components/PostPreview.css';
+@import './components/PostTemplate.css';
 @import './components/Responsive.css';
 @import './components/SearchLink.css';
 @import './components/TagLinks.css';

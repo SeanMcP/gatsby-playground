@@ -1,0 +1,13 @@
+.PostTemplate__header {
+    text-align: center;
+}
+
+.PostTemplate__details {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.PostTemplate__details-spacer {
+    margin: 0 0.25rem;
+}
