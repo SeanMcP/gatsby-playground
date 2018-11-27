@@ -53,10 +53,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      limit: 3
-    ) {
+    allMarkdownRemark(filter: {frontmatter: {published: {eq: true}}}, sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
       edges {
         node {
           excerpt
@@ -64,7 +61,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
             category
             author

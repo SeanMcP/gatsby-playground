@@ -4,6 +4,7 @@ date: '2015-05-06T23:46:37.121Z'
 author: 'Sean McPherson'
 category: Next
 tags: [one, two, three, four]
+published: true
 ---
 
 Wow! I love blogging so much already.
