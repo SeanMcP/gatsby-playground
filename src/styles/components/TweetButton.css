@@ -1,8 +1,9 @@
-.TagLinks {
+.TweetButton {
     align-items: center;
     display: flex;
+    margin-left: auto;
 }
 
-.TagLinks__icon {
+.TweetButton__icon {
     margin-right: 0.5rem;
 }

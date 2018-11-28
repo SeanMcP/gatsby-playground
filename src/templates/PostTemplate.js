@@ -32,6 +32,8 @@ class PostTemplate extends React.Component {
                     </PageHeader>
                     <main dangerouslySetInnerHTML={{ __html: post.html }} />
                     <PostFooter
+                        articleHref={location.href}
+                        articleTitle={post.frontmatter.title}
                         category={post.frontmatter.category}
                         date={post.frontmatter.date}
                         modifier={'post-template'}
