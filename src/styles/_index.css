@@ -25,6 +25,7 @@ body {
 @import './components/Header.css';
 @import './components/Layout.css';
 @import './components/MainNav.css';
+@import './components/PageHeader.css';
 @import './components/PostDate.css';
 @import './components/PostBio.css';
 @import './components/PostFooter.css';

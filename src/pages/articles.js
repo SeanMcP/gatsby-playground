@@ -4,6 +4,7 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
+import PageHeader from '../components/common/PageHeader';
 import PostPreview from '../components/post/PostPreview';
 
 class Articles extends React.Component {
@@ -22,7 +23,13 @@ class Articles extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Articles - ${siteTitle}`}
                 />
-                <h1>Articles</h1>
+                <PageHeader>
+                    <h1>Articles</h1>
+                    <p>
+                        I usually write about software development with a focus
+                        on JavaScript, React, and (occassionally) Python.
+                    </p>
+                </PageHeader>
                 {posts.map(({ node }) => (
                     <PostPreview
                         author={node.frontmatter.author}

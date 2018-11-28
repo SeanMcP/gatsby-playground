@@ -3,8 +3,9 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
 
-import PostBio from '../components/post/PostBio';
 import Layout from '../components/Layout';
+import PageHeader from '../components/common/PageHeader';
+import PostBio from '../components/post/PostBio';
 import PostDate from '../components/post/PostDate';
 import PostFooter from '../components/post/PostFooter';
 
@@ -23,12 +24,12 @@ class PostTemplate extends React.Component {
                     title={`${post.frontmatter.title} | ${siteTitle}`}
                 />
                 <article className="PostTemplate">
-                    <header className="PostTemplate__header">
+                    <PageHeader centered>
                         <h1>{post.frontmatter.title}</h1>
                         <section className={'PostTemplate__details'}>
                             <PostDate date={post.frontmatter.date} hideIcon />
                         </section>
-                    </header>
+                    </PageHeader>
                     <main dangerouslySetInnerHTML={{ __html: post.html }} />
                     <PostFooter
                         category={post.frontmatter.category}

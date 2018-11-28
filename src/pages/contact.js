@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
+import PageHeader from '../components/common/PageHeader';
 
 const ContactPage = ({ data, location }) => {
     const siteTitle = get(data, 'site.siteMetadata.title');
@@ -15,7 +16,9 @@ const ContactPage = ({ data, location }) => {
                 meta={[{ name: 'description', content: siteDescription }]}
                 title={`Contact - ${siteTitle}`}
             />
-            <h1>Contact</h1>
+            <PageHeader>
+                <h1>Contact</h1>
+            </PageHeader>
             <p>
                 Do you have an excited job opportunity for me?{' '}
                 <a

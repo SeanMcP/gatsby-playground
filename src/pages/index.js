@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import { Introduction } from '../components/text/Text';
 import Layout from '../components/Layout';
+import PageHeader from '../components/common/PageHeader';
 import PostPreview from '../components/post/PostPreview';
 
 class BlogIndex extends React.Component {
@@ -23,6 +24,9 @@ class BlogIndex extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={siteTitle}
                 />
+                <PageHeader>
+                    <h1>Hello there!</h1>
+                </PageHeader>
                 <Introduction />
                 <h2>Recent articles</h2>
                 {posts.map(({ node }) => (

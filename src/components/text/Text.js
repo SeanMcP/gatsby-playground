@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 
 export const Introduction = () => (
     <React.Fragment>
-        <h1>Hello there!</h1>
         <p>
             My name is <strong>Sean McPherson</strong>, and I am a software
             developer, educator, and learner. I work as a UI/UX Developer with
