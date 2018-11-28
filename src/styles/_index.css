@@ -18,6 +18,7 @@ body {
 /* Styles */
 @import './headings.css';
 @import './links.css';
+@import './hr.css';
 
 /* Components */
 @import './components/CategoryLink.css';

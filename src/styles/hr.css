@@ -1,0 +1,10 @@
+hr {
+    background: var(--gray200);
+    border: 0;
+    height: 1px;
+    margin: 2rem 0;
+}
+
+hr.--short {
+    margin-top: 1rem;
+}

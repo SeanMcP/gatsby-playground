@@ -1,4 +1,4 @@
-.PostPreview:not(:last-of-type) {
+.PostPreview {
     margin-bottom: 2rem;
 }
 

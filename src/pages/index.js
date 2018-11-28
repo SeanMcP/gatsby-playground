@@ -29,6 +29,7 @@ class BlogIndex extends React.Component {
                 </PageHeader>
                 <Introduction />
                 <h2>Recent articles</h2>
+                <hr className="--short" />
                 {posts.map(({ node }) => (
                     <PostPreview
                         key={node.fields.slug}
