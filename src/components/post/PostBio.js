@@ -24,7 +24,7 @@ const PostBio = () => {
     const links = socialLinks.map(platform => {
         return (
             <li className="PostBio__social-item" key={platform.name}>
-                <Icon icon={platform.icon} />
+                <Icon className="PostBio__social-icon" icon={platform.icon} />
                 <a className="PostBio__social-link" href={platform.href}>
                     {platform.name}
                 </a>

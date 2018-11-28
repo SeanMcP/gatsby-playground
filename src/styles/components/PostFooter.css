@@ -6,3 +6,14 @@
 .PostFooter > *:not(:last-child) {
     margin-right: 2rem;
 }
+
+@media screen and (max-width: 800px) {
+    .PostFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .PostFooter > *:not(:last-child) {
+        margin: 0 0 1rem;
+    }
+}

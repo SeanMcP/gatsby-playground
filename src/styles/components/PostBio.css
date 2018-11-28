@@ -1,15 +1,11 @@
 .PostBio {
-    border-top: 1px solid var(--gray200);
     display: flex;
-    margin-top: 2rem;
-    padding-top: 2rem;
 }
 
 .PostBio__image {
     border-radius: 5rem;
     margin-right: 1rem;
     height: 5rem;
-    /* width: 5rem; */
 }
 
 .PostBio__content > *:first-child {
@@ -33,9 +29,35 @@
 }
 
 .PostBio__social-item:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
-.PostBio__social-link {
-    margin-left: 0.25rem;
+.PostBio__social-icon {
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .PostBio {
+        flex-direction: column;
+    }
+
+    .PostBio__image {
+        border-radius: 5rem;
+        height: initial;
+        margin: 0 auto 1rem;
+        width: 8rem;
+    }
+
+    .PostBio__social-list {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .PostBio__social-item:not(:last-child) {
+        margin: 0 0 1rem;
+    }
+
+    /* .PostBio > *:not(:last-child) {
+        margin: 0 0 1rem;
+    } */
 }

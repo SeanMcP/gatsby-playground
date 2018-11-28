@@ -11,3 +11,19 @@
 .PostPreview__title {
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 800px) {
+    .PostPreview {
+        margin-bottom: 3rem;
+    }
+
+    .PostPreview__header {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    /* first- as opposed to last-child because the order has been reversed above */
+    .PostPreview__header > *:not(:first-child) {
+        margin: 0 0 1rem;
+    }
+}

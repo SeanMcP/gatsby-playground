@@ -7,3 +7,22 @@
 .TweetButton__icon {
     margin-right: 0.5rem;
 }
+
+@media screen and (max-width: 800px) {
+    .TweetButton {
+        border: 2px solid var(--primary-color);
+        border-radius: 5rem;
+        margin-right: auto;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        transition: all 100ms ease-in-out;
+    }
+
+    .TweetButton:hover,
+    .TweetButton:active {
+        background: var(--primary-hover);
+        border-color: var(--primary-hover);
+        color: var(--secondary-text);
+        text-decoration: none;
+    }
+}

@@ -31,6 +31,7 @@ class PostTemplate extends React.Component {
                         </section>
                     </PageHeader>
                     <main dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <hr/>
                     <PostFooter
                         articleHref={location.href}
                         articleTitle={post.frontmatter.title}
@@ -39,6 +40,7 @@ class PostTemplate extends React.Component {
                         modifier={'post-template'}
                         tags={post.frontmatter.tags}
                     />
+                    <hr/>
                     <PostBio />
                     {/* {(next || previous) && (
             <ul>

@@ -11,7 +11,7 @@ const TweetButton = props => {
     return (
         <a className="TweetButton" href={href} target="_blank">
             <Icon className={'TweetButton__icon'} icon={'Twitter'} />
-            <span className="TweetButton__text">Share this article</span>
+            <span className="TweetButton__text">Share</span>
         </a>
     );
 };
