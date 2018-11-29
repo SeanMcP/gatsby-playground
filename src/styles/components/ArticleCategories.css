@@ -1,0 +1,20 @@
+.ArticleCategories {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.ArticleCategories__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ArticleCategories__list-item {
+    display: flex;
+    margin-left: 0.5rem;
+}
+
+.ArticleCategories__list-item:not(:last-child)::after {
+    content: ','
+}

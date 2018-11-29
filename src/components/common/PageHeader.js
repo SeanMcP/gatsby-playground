@@ -7,7 +7,7 @@ const PageHeader = ({ centered, children }) => {
             className={`PageHeader ${centered ? 'PageHeader--centered' : ''}`}
         >
             {children}
-            <hr/>
+            <hr />
         </header>
     );
 };

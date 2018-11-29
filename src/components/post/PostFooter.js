@@ -6,7 +6,14 @@ import CategoryLink from '../common/CategoryLink';
 import TagLinks from '../common/TagLinks';
 import TweetButton from './TweetButton';
 
-const PostFooter = ({ articleHref, articleTitle, category, date, modifier, tags }) => (
+const PostFooter = ({
+    articleHref,
+    articleTitle,
+    category,
+    date,
+    modifier,
+    tags,
+}) => (
     <footer
         className={`PostFooter ${modifier ? `PostFooter--${modifier}` : ''}`}
     >

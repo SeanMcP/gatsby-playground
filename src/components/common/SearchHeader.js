@@ -8,7 +8,6 @@ const SearchHeader = ({ queryKey, queryValue }) => {
     const capValue = capitalize(queryValue);
     return (
         <PageHeader>
-            <p className="SearchHeader__key">{queryKey}</p>
             <h1 className="SearchHeader__heading">{capValue}</h1>
             <p>
                 All the articles {queryKey === 'Category' ? 'in' : 'with'} the “

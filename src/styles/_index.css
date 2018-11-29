@@ -21,6 +21,7 @@ body {
 @import './hr.css';
 
 /* Components */
+@import './components/ArticleCategories.css';
 @import './components/CategoryLink.css';
 @import './components/Footer.css';
 @import './components/Header.css';
