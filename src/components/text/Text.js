@@ -1,6 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+export const About = () => (
+    <React.Fragment>
+        <p>I was born and raised in State College, Pennsylvania.</p>
+        <p>I studied Middle-level Education at Edinboro University.</p>
+        <p>I moved to Atlanta to work for Gwinnett County Public Schools.</p>
+        <p>
+            I graduated from The Iron Yard with a certificate in Front-end
+            Development.
+        </p>
+    </React.Fragment>
+);
+
 export const Introduction = () => (
     <React.Fragment>
         <p>

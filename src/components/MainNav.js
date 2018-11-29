@@ -12,6 +12,10 @@ const links = [
         text: 'Articles',
     },
     {
+        destination: '/about',
+        text: 'About',
+    },
+    {
         destination: '/contact',
         text: 'Contact',
     },
