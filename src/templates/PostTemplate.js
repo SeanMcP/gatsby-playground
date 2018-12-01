@@ -8,24 +8,31 @@ import PageHeader from '../components/common/PageHeader';
 import PostBio from '../components/post/PostBio';
 import PostDate from '../components/post/PostDate';
 import PostFooter from '../components/post/PostFooter';
+import PostHelmet from '../components/post/PostHelmet';
+
+{/* <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@flickr" />
+<meta name="twitter:title" content="Small Island Developing States Photo Submission" />
+<meta name="twitter:description" content="View the album on Flickr." />
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" /> */}
 
 class PostTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-        const siteDescription = post.excerpt;
-        const { previous, next } = this.props.pageContext;
+        const postDescription = post.frontmatter.summary || post.excerpt;
+        const postTitle = post.frontmatter.title;
 
         return (
             <Layout location={this.props.location} title={siteTitle}>
-                <Helmet
-                    htmlAttributes={{ lang: 'en' }}
-                    meta={[{ name: 'description', content: siteDescription }]}
-                    title={`${post.frontmatter.title} | ${siteTitle}`}
+                <PostHelmet
+                    postDescription={postDescription}
+                    postTitle={postTitle}
+                    siteTitle={siteTitle}
                 />
                 <article className="PostTemplate">
                     <PageHeader centered>
-                        <h1>{post.frontmatter.title}</h1>
+                        <h1>{postTitle}</h1>
                         <section className={'PostTemplate__details'}>
                             <PostDate date={post.frontmatter.date} hideIcon />
                         </section>
