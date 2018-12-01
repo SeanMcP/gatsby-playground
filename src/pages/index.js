@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
                         author={node.frontmatter.author}
                         category={node.frontmatter.category}
                         condensed
-                        content={node.excerpt}
+                        content={node.frontmatter.summary || node.excerpt}
                         date={node.frontmatter.date}
                         slug={node.fields.slug}
                         tags={node.frontmatter.tags}
@@ -73,9 +73,10 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         date(formatString: "MMMM D, YYYY")
-                        title
                         category
+                        summary
                         tags
+                        title
                     }
                 }
             }

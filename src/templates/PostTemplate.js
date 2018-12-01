@@ -42,24 +42,6 @@ class PostTemplate extends React.Component {
                     />
                     <hr />
                     <PostBio />
-                    {/* {(next || previous) && (
-            <ul>
-              {previous && (
-                <li>
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                </li>
-              )}
-              {next && (
-                <li>
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                </li>
-              )}
-            </ul>
-          )} */}
                 </article>
             </Layout>
         );
@@ -81,10 +63,11 @@ export const pageQuery = graphql`
             excerpt
             html
             frontmatter {
-                title
-                date(formatString: "MMMM D, YYYY")
                 category
+                date(formatString: "MMMM D, YYYY")
+                summary
                 tags
+                title
             }
         }
     }
