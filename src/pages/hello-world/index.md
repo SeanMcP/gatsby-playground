@@ -1,5 +1,6 @@
 ---
 title: Hello World
+summary: This is a short summary
 date: '2015-05-01T22:12:03.284Z'
 category: miscellaneous
 tags: [one, two]

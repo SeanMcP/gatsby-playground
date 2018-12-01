@@ -1,5 +1,6 @@
 ---
 title: How to Cut Your Hair
+summary: This is the shortest summary
 date: '2018-11-26T14:29:00.000Z'
 category: finances
 tags: [frugal, personal, skill]
