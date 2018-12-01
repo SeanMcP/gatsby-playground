@@ -83,17 +83,12 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
+        _.each(posts, (post) => {
           createPage({
             path: `/articles/${post.node.fields.slug.slice(1)}`,
             component: blogPost,
             context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
+              slug: post.node.fields.slug
             },
           })
         })
