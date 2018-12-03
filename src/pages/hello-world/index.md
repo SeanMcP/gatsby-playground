@@ -1,11 +1,17 @@
 ---
 title: Hello World
-summary:
+summary: false
 date: '2015-05-01T22:12:03.284Z'
 category: miscellaneous
 tags: [one, two]
 published: true
 ---
+
+```js{1,3}{numberLines: true}
+function hello(name) {
+    return `Hello ${name}!`;
+}
+```
 
 This is my first post on my new fake blog! How exciting!
 

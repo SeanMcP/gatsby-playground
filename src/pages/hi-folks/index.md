@@ -1,6 +1,6 @@
 ---
 title: New Beginnings
-summary:
+summary: false
 date: '2015-05-28T22:40:32.169Z'
 category: general
 tags: [three, four]

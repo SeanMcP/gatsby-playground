@@ -4,6 +4,7 @@
 /* Global */
 @import './variables.css';
 @import './typography.css';
+@import './gatsby-prism.css';
 
 body {
     background: var(--primary-bg);

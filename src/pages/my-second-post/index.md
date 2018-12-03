@@ -1,6 +1,6 @@
 ---
 title: My Second Post!
-summary:
+summary: false
 date: '2015-05-06T23:46:37.121Z'
 category: development
 tags: [one, two, three, four]
