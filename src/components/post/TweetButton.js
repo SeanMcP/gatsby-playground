@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Icon from '../common/Icon';
 
 const TweetButton = props => {
-    const tweet = `“${props.articleTitle}” by Sean McPherson (@mcpcodes)  ̶ ${
+    const tweet = `“${props.articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${
         props.articleHref
     }`;
     const href = `https://twitter.com/intent/tweet?text=${tweet}`;

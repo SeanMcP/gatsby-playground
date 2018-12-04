@@ -13,7 +13,7 @@ const PostHelmet = ({
         title={`${postTitle} | ${siteTitle}`}
     >
         <meta name="twitter:card" content={postDescription} />
-        <meta name="twitter:site" content="@mcpcodes" />
+        <meta name="twitter:site" content="@_seanmcp" />
         <meta name="twitter:title" content={postTitle} />
         <meta name="twitter:description" content="View the album on Flickr." />
         <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />

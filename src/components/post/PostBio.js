@@ -9,7 +9,7 @@ const socialLinks = [
         name: 'GitHub',
     },
     {
-        href: 'https://twitter.com/mcpcodes',
+        href: 'https://twitter.com/_seanmcp',
         icon: 'Twitter',
         name: 'Twitter',
     },
