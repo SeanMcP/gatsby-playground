@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
 import Responsive from './common/Responsive';
+import Thumbnail from './common/Thumbnail';
 
 const Header = props => {
     return (

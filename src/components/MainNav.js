@@ -4,10 +4,6 @@ import { Link } from 'gatsby';
 
 const links = [
     {
-        destination: '/',
-        text: 'Home',
-    },
-    {
         destination: '/articles',
         text: 'Articles',
     },

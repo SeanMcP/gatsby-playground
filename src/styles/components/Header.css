@@ -2,8 +2,25 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
 }
 
+.Header__logo-link {
+    font-family: var(--display-font);
+    font-size: 125%;
+}
+
 .Responsive--header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
+}
+
+@media screen and (max-width: calc(800px + 32px)) {
+    .Responsive--header {
+        flex-direction: column;
+    }
+
+    .Header__logo-link {
+        font-size: 150%;
+        margin-bottom: 1rem;
+    }
 }
