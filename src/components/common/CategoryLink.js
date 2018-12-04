@@ -25,7 +25,7 @@ CategoryLink.propTypes = {
     category: PropTypes.string.isRequired,
     hideIcon: PropTypes.bool,
     lede: PropTypes.string,
-    modifier: PropTypes.string,
+    modifier: PropTypes.string
 };
 
 export default CategoryLink;

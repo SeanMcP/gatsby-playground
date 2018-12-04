@@ -12,7 +12,7 @@ const Icon = ({ className, icon, size }) => {
 Icon.propTypes = {
     className: PropTypes.string,
     icon: PropTypes.string.isRequired,
-    size: PropTypes.number,
+    size: PropTypes.number
 };
 
 export default Icon;

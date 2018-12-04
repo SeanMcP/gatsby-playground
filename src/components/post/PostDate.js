@@ -17,7 +17,7 @@ const PostDate = ({ date, hideIcon, modifier }) => {
 PostDate.propTypes = {
     date: PropTypes.string.isRequired,
     hideIcon: PropTypes.bool,
-    modifier: PropTypes.string,
+    modifier: PropTypes.string
 };
 
 export default PostDate;

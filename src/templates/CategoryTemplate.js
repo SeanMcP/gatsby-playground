@@ -11,7 +11,7 @@ const CategoryTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
     const posts = get(props, 'data.allMarkdownRemark.edges');
     const {
-        location: { pathname },
+        location: { pathname }
     } = window;
     const category = pathname.slice(pathname.lastIndexOf('/') + 1);
     return (

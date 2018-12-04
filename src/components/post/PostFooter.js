@@ -12,7 +12,7 @@ const PostFooter = ({
     category,
     date,
     modifier,
-    tags,
+    tags
 }) => (
     <footer
         className={`PostFooter ${modifier ? `PostFooter--${modifier}` : ''}`}
@@ -34,7 +34,7 @@ PostFooter.propTypes = {
     articleTitle: PropTypes.string,
     date: PropTypes.string,
     modifier: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default PostFooter;

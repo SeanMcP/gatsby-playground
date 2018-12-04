@@ -13,7 +13,7 @@ const PageHeader = ({ centered, children }) => {
 };
 
 PageHeader.propTypes = {
-    centered: PropTypes.bool,
+    centered: PropTypes.bool
 };
 
 export default PageHeader;

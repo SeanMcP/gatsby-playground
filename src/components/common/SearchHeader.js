@@ -19,7 +19,7 @@ const SearchHeader = ({ queryKey, queryValue }) => {
 
 SearchHeader.propTypes = {
     queryKey: PropTypes.string.isRequired,
-    queryValue: PropTypes.string.isRequired,
+    queryValue: PropTypes.string.isRequired
 };
 
 export default SearchHeader;

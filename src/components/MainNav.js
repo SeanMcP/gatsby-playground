@@ -5,16 +5,16 @@ import { Link } from 'gatsby';
 const links = [
     {
         destination: '/articles',
-        text: 'Articles',
+        text: 'Articles'
     },
     {
         destination: '/about',
-        text: 'About',
+        text: 'About'
     },
     {
         destination: '/contact',
-        text: 'Contact',
-    },
+        text: 'Contact'
+    }
 ];
 
 const MainNav = ({ location }) => {
@@ -39,7 +39,7 @@ const MainNav = ({ location }) => {
 };
 
 MainNav.propTypes = {
-    location: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired
 };
 
 export default MainNav;

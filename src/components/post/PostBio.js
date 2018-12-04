@@ -7,18 +7,18 @@ const socialLinks = [
     {
         href: 'https://github.com/seanmcp',
         icon: 'GitHub',
-        name: 'GitHub',
+        name: 'GitHub'
     },
     {
         href: 'https://twitter.com/_seanmcp',
         icon: 'Twitter',
-        name: 'Twitter',
+        name: 'Twitter'
     },
     {
         href: 'https://linkedin.com/in/seanmcp',
         icon: 'Linkedin',
-        name: 'LinkedIn',
-    },
+        name: 'LinkedIn'
+    }
 ];
 
 const PostBio = () => {

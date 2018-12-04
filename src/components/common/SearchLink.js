@@ -16,7 +16,7 @@ const SearchLink = ({ className, queryKey, queryValue }) => (
 SearchLink.propTypes = {
     className: PropTypes.string,
     queryKey: PropTypes.string.isRequired,
-    queryValue: PropTypes.string.isRequired,
+    queryValue: PropTypes.string.isRequired
 };
 
 export default SearchLink;

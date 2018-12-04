@@ -18,7 +18,7 @@ const TagLinks = ({ hideIcon, modifier, tags }) => {
 TagLinks.propTypes = {
     hideIcon: PropTypes.bool,
     modifier: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default TagLinks;

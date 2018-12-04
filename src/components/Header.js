@@ -21,9 +21,9 @@ const Header = props => {
 
 Header.propTypes = {
     location: PropTypes.shape({
-        pathname: PropTypes.string.isRequired,
+        pathname: PropTypes.string.isRequired
     }).isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
 };
 
 export default Header;

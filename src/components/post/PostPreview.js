@@ -31,7 +31,7 @@ PostPreview.propTypes = {
     content: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
 };
 
 export default PostPreview;

@@ -24,9 +24,9 @@ const ArticleCategories = ({ list }) => {
 ArticleCategories.propTypes = {
     list: PropTypes.arrayOf(
         PropTypes.shape({
-            fieldValue: PropTypes.string.isRequired,
+            fieldValue: PropTypes.string.isRequired
         })
-    ).isRequired,
+    ).isRequired
 };
 
 export default ArticleCategories;

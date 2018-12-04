@@ -18,7 +18,7 @@ const TweetButton = props => {
 
 TweetButton.propTypes = {
     articleHref: PropTypes.string.isRequired,
-    articleTitle: PropTypes.string.isRequired,
+    articleTitle: PropTypes.string.isRequired
 };
 
 export default TweetButton;
