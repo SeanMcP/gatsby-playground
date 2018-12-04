@@ -4,12 +4,28 @@ summary: false
 date: '2015-05-01T22:12:03.284Z'
 category: miscellaneous
 tags: [one, two]
-published: true
+published: false
 ---
 
 ```js{1,3}{numberLines: true}
+// A comment
+
 function hello(name) {
     return `Hello ${name}!`;
+}
+
+class Sean extends React.Component {
+    state = {
+        age: 26,
+        favoriteAnimal: 'wolf'
+        isFemale: false,
+        name: 'Sean'
+    }
+    render() {
+        return (
+            <div>Hello there! I'm Sean.</div>
+        );
+    }
 }
 ```
 

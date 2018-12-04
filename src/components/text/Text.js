@@ -18,7 +18,7 @@ export const Introduction = () => (
         <p>
             My name is <strong>Sean McPherson</strong>, and I am a software
             developer, educator, and learner. I work as a UI/UX Developer with
-            React for TSYS in Atlanta, GA. I also organize{' '}
+            React for <a href="https://www.tsys.com/about-us/" targe="_blank">TSYS</a> in Atlanta, GA. I also organize{' '}
             <a href="https://meetup.com/jrdevatl" target="_blank">
                 Jr Devs
             </a>
