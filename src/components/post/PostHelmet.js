@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-const PostHelmet = ({ postDescription, postTitle, siteTitle }) => (
+const PostHelmet = ({
+    postDescription,
+    postImageUrl,
+    postTitle,
+    siteTitle
+}) => (
     <Helmet
         htmlAttributes={{ lang: 'en' }}
         meta={[{ name: 'description', content: postDescription }]}
@@ -11,16 +16,14 @@ const PostHelmet = ({ postDescription, postTitle, siteTitle }) => (
         <meta name="twitter:card" content={postDescription} />
         <meta name="twitter:site" content="@_seanmcp" />
         <meta name="twitter:title" content={postTitle} />
-        <meta name="twitter:description" content="View the album on Flickr." />
-        <meta
-            name="twitter:image"
-            content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"
-        />
+        {/* <meta name="twitter:description" content="View the album on Flickr." /> */}
+        {postImageUrl && <meta name="twitter:image" content={postImageUrl} />}
     </Helmet>
 );
 
 PostHelmet.propTypes = {
     postDescription: PropTypes.string.isRequired,
+    postImageUrl: PropTypes.string,
     postTitle: PropTypes.string.isRequired,
     siteTitle: PropTypes.string.isRequired
 };
