@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from '../common/Icon';
+import Thumbnail from '../common/Thumbnail';
 
 const socialLinks = [
     {
@@ -33,11 +34,7 @@ const PostBio = () => {
     });
     return (
         <section className="PostBio">
-            <img
-                alt={"An illustration of Sean McPherson's head"}
-                className={'PostBio__image'}
-                src={require('../../assets/seanmcp.jpeg')}
-            />
+            <Thumbnail className={'PostBio__image'} />
             <main className="PostBio__content">
                 <p>
                     My name is <strong>Sean McPherson</strong>, and I am a

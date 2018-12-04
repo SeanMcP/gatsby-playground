@@ -38,4 +38,5 @@ body {
 @import './components/SearchHeader.css';
 @import './components/SearchLink.css';
 @import './components/TagLinks.css';
+@import './components/Thumbnail.css';
 @import './components/TweetButton.css';
